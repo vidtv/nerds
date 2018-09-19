@@ -1,35 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Nerds</title>
-</head>
-<body>
-    <header>
-        <a href="index.html" placeholder="На главную"></a>
-        <nav class="main-menu">
-            <ul>
-                <li>
-                    <a href="#">Студия</a>
-                </li>
-                <li>
-                    <a href="#">Клиенты</a>
-                </li>
-                <li>
-                    <a href="#">Магазин</a>
-                </li>
-                <li>
-                    <a href="#">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-        <a href="#">Корзина</a>
-    </header>
-    <main>
-        <div class="promo">
-            <div class="slide_description"></div>
-            <div class="slider"></div>
-        </div>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nerds</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="main-page-link">
+                    <a href="index.html" class="to-main-page">
+                        <img src="logo-index.png" alt="Nerds">
+                    </a>
+                </div>
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Студия</a>
+                        </li>
+                        <li>
+                            <a href="#">Клиенты</a>
+                        </li>
+                        <li>
+                            <a href="catalog.html">Магазин</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="basket">
+                    <a href="#">Корзина</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="promo-slide">
+                    <div class="slide1">
+                        <div class="slide-information">
+                            <h1>Долго, дорого, скрупулезно.</h1>
+                            <p class="slide-description">Математически выверенный дизайн
+                                для вашего сайта или мобильного приложения.</p>
+                            <a class="btn btn-red" href="#">Узнать больше</a>
+                        </div>
+                        <div class="slide-image"></div>
+                    </div>
+                    <div class="slide2" style="display: none">
+                        <div class="slide-information">
+                            <h1>Любим математику как никто другой.</h1>
+                            <p class="slide-description">Никакого креатива, только математические формулы для расчета
+                            идеальных пропорций.</p>
+                            <a class="btn btn-red" href="#">Узнать больше</a>
+                        </div>
+                        <div class="slide-image"></div>
+                    </div>
+                    <div class="slide3" style="display: none">
+                        <div class="slide-information">
+                            <h1>Только ночь, только хардкор</h1>
+                            <p class="slide-description">Работать днем, как все? Мы против этого. Ближе к полуночи
+                            работа только начинается.</p>
+                            <a class="btn btn-red" href="#">Узнать больше</a>
+                        </div>
+                        <div class="slide-image"></div>
+                    </div>
+                    <div class="slider-toggler">
+                        <input type="radio" id="slide1">
+                        <input type="radio" id="slide2">
+                        <input type="radio" id="slide3">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                </div>
+                <section class="features">
+                    <div class="feature-item">
+                        <div class="feature-item-image"></div>
+                        <h2>Веб-сайты</h2>
+                        <p class="feature-item-description">Мир никогда не будет прежним после того,
+                            как увидит ваш сайт!</p>
+                        <a class="btn btn-red" href="#">Заказать</a>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-image"></div>
+                        <h2>Приложения</h2>
+                        <p class="feature-item-description">Покорите топ-10 приложений в AppStore и Google Play</p>
+                        <a class="btn btn-green" href="#">Заказать</a>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-image"></div>
+                        <h2>Презентации</h2>
+                        <p class="feature-item-description">Вы даже не подозреваете, насколько вы изумительны!</p>
+                        <a class="btn btn-yellow" href="#">Заказать</a>
+                    </div>
+                </section>
+                <div class="about-us">
+                    <div class="about-us-left">
+                        <h1 class="about-us-main">Мы - маленькая, но гордая дизайн-студия из Краснодара.</h1>
+                        <p class="about-us-features">Исповедуем принципы минимализма и чистоты.
+                        Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+                        <h3>Выполняем заказы на разработку:</h3>
+                        <ul class="about-us-orders">
+                            <li>Веб-сайтов любой сложности</li>
+                            <li>Мобильных приложений для iOS и Android</li>
+                            <li>Слайдшоу и видео для корпоративных презентаций</li>
+                        </ul>
+                    </div>
+                    <div class="about-us-right">
+                        <div class="about-us-logo">
+                            <img src="logo-about-us.png">
+                        </div>
+                        <h3>С 2004 года любим точность во всем:</h3>
+                        <section class="about-us-stats">
+                            <div class="about-us-power">
+                                <h1>146<sup>%</sup></h1>
+                                <p>Уровень самоотдачи</p>
+                            </div>
+                            <div class="about-us-due">
+                                <h1>100<sup>%</sup></h1>
+                                <p>Соблюдение сроков</p>
+                            </div>
+                            <div class="about-us-prepayment">
+                                <h1>50<sup>%</sup></h1>
+                                <p>Минимальная предоплата</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
