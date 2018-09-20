@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин готовых шаблонов</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="main-page-link">
+                <a href="index.html" class="to-main-page">
+                    <img src="logo-index.png" alt="Nerds">
+                </a>
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li>
+                        <a href="#">Студия</a>
+                    </li>
+                    <li>
+                        <a href="#">Клиенты</a>
+                    </li>
+                    <li>
+                        <a href="catalog.html">Магазин</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="basket">
+                <a href="#">Корзина</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="our-shop">Магазин готовых шаблонов</h1>
+            <div class="our-shop-search">
+                <form class="our-shop-search-filters" action="#" method="get">
+                        <div class="search-value-filter">
+                            <h3>Стоимость:</h3>
+                            <div class="search-slider">
+                                <div class="search-slider-scale"></div>
+                            </div>
+                            <label class="search-value search-value-from" for="value-from">От</label>
+                            <input type="text" id="value-from">
+                            <label class="search-value-before" for="value-before">До</label>
+                            <input type="text" id="value-before">
+                        </div>
+                        <div class="search-grid-filter">
+                            <h3>Сетка:</h3>
+                            <label><input type="radio" value="adaptive" id="adaptive" checked>Адаптивная</label>
+                            <label><input type="radio" value="fixed" id="fixed">Фиксированная</label>
+                            <label><input type="radio" value="gum" id="gum">Резиновая</label>
+                        </div>
+                        <div class="search-features-filter">
+                            <h3>Особенности:</h3>
+                            <label><input type="checkbox" value="slider" checked>Слайдер</label>
+                            <label><input type="checkbox" value="features-block">Слайдер</label>
+                            <label><input type="checkbox" value="news" checked>Слайдер</label>
+                            <label><input type="checkbox" value="gallery">Слайдер</label>
+                            <label><input type="checkbox" value="basket">Слайдер</label>
+                        </div>
+                        <button class="btn btn-grey" type="submit">Показать</button>
+                    </form>
+            </div>
+            <div class="our-shop-search-results">
+                <!-- Блок результатов -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>
