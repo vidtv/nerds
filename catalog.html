@@ -1,74 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Магазин готовых шаблонов</title>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="main-page-link">
-                <a href="index.html" class="to-main-page">
-                    <img src="logo-index.png" alt="Nerds">
-                </a>
+    <head>
+        <meta charset="UTF-8">
+        <title>Магазин готовых шаблонов</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="main-page-link">
+                    <a href="index.html" class="to-main-page">
+                        <img src="logo-index.png" alt="Nerds">
+                    </a>
+                </div>
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Студия</a>
+                        </li>
+                        <li>
+                            <a href="#">Клиенты</a>
+                        </li>
+                        <li>
+                            <a href="catalog.html">Магазин</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="basket">
+                    <a href="#">Корзина</a>
+                </div>
             </div>
-            <nav class="main-menu">
-                <ul>
-                    <li>
-                        <a href="#">Студия</a>
-                    </li>
-                    <li>
-                        <a href="#">Клиенты</a>
-                    </li>
-                    <li>
-                        <a href="catalog.html">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="basket">
-                <a href="#">Корзина</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <h1 class="our-shop">Магазин готовых шаблонов</h1>
-            <div class="our-shop-search">
-                <form class="our-shop-search-filters" action="#" method="get">
-                        <div class="search-value-filter">
-                            <h3>Стоимость:</h3>
-                            <div class="search-slider">
-                                <div class="search-slider-scale"></div>
+        </header>
+        <main>
+            <div class="container">
+                <h1 class="our-shop">Магазин готовых шаблонов</h1>
+                <div class="our-shop-search">
+                    <form class="our-shop-search-filters" action="#" method="get">
+                            <div class="search-value-filter">
+                                <h3>Стоимость:</h3>
+                                <div class="search-slider">
+                                    <div class="search-slider-scale"></div>
+                                </div>
+                                <label class="search-value search-value-from" for="value-from">От</label>
+                                <input type="text" id="value-from">
+                                <label class="search-value-before" for="value-before">До</label>
+                                <input type="text" id="value-before">
                             </div>
-                            <label class="search-value search-value-from" for="value-from">От</label>
-                            <input type="text" id="value-from">
-                            <label class="search-value-before" for="value-before">До</label>
-                            <input type="text" id="value-before">
+                            <div class="search-grid-filter">
+                                <h3>Сетка:</h3>
+                                <label><input type="radio" value="adaptive" id="adaptive" checked>Адаптивная</label>
+                                <label><input type="radio" value="fixed" id="fixed">Фиксированная</label>
+                                <label><input type="radio" value="gum" id="gum">Резиновая</label>
+                            </div>
+                            <div class="search-features-filter">
+                                <h3>Особенности:</h3>
+                                <label><input type="checkbox" value="slider" checked>Слайдер</label>
+                                <label><input type="checkbox" value="features-block">Слайдер</label>
+                                <label><input type="checkbox" value="news" checked>Слайдер</label>
+                                <label><input type="checkbox" value="gallery">Слайдер</label>
+                                <label><input type="checkbox" value="basket">Слайдер</label>
+                            </div>
+                            <button class="btn btn-grey" type="submit">Показать</button>
+                        </form>
+                </div>
+                <div class="our-shop-search-results">
+                    <div class="sort">
+                        <h3>Сортировать:</h3>
+                        <div class="sort-parameters">
+                            <a href="#" class="sort-parameter">По цене</a>
+                            <a href="#" class="sort-parameter">По типу</a>
+                            <a href="#" class="sort-parameter">По названию</a>
+                            <a href="#" class="sort-order sort-by-desc"></a>
+                            <a href="#" class="sort-order sort-by-asc"></a>
                         </div>
-                        <div class="search-grid-filter">
-                            <h3>Сетка:</h3>
-                            <label><input type="radio" value="adaptive" id="adaptive" checked>Адаптивная</label>
-                            <label><input type="radio" value="fixed" id="fixed">Фиксированная</label>
-                            <label><input type="radio" value="gum" id="gum">Резиновая</label>
-                        </div>
-                        <div class="search-features-filter">
-                            <h3>Особенности:</h3>
-                            <label><input type="checkbox" value="slider" checked>Слайдер</label>
-                            <label><input type="checkbox" value="features-block">Слайдер</label>
-                            <label><input type="checkbox" value="news" checked>Слайдер</label>
-                            <label><input type="checkbox" value="gallery">Слайдер</label>
-                            <label><input type="checkbox" value="basket">Слайдер</label>
-                        </div>
-                        <button class="btn btn-grey" type="submit">Показать</button>
-                    </form>
+                    </div>
+                    <section class="our-shop-landings">
+                        <article class="our-shop-landings-item">
+                            <header class="landing-header"></header>
+                            <div class="landing-view">
+                                <div class="landing-view">
+                                    <h3 class="landing-name">Sedona</h3>
+                                    <p class="landing-info">Информационный сайт для туристов</p>
+                                    <a class="btn btn-red" href="#">9 900 руб.</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="our-shop-landings-item">
+                            <header class="landing-header"></header>
+                            <div class="landing-view">
+                                <div class="landing-view">
+                                    <h3 class="landing-name">Pink App</h3>
+                                    <p class="landing-info">Продуктовый лендинг приложения для iOS и Android</p>
+                                    <a class="btn btn-red" href="#">9 900 руб.</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="our-shop-landings-item">
+                            <header class="landing-header"></header>
+                            <div class="landing-view">
+                                <div class="landing-view">
+                                    <h3 class="landing-name">Barbershop</h3>
+                                    <p class="landing-info">Сайт салона красоты. Для мужчин, да.</p>
+                                    <a class="btn btn-red" href="#">9 900 руб.</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="our-shop-landings-item">
+                            <header class="landing-header"></header>
+                            <div class="landing-view">
+                                <div class="landing-view">
+                                    <h3 class="landing-name">Mishka</h3>
+                                    <p class="landing-info">Интернет-магазин вязаных игрушек</p>
+                                    <a class="btn btn-red" href="#">9 900 руб.</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="our-shop-landings-item">
+                            <header class="landing-header"></header>
+                            <div class="landing-view">
+                                <div class="landing-view">
+                                    <h3 class="landing-name">A Plus</h3>
+                                    <p class="landing-info">Лендинг курсов повышения квалификации</p>
+                                    <a class="btn btn-red" href="#">9 900 руб.</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="our-shop-landings-item">
+                            <header class="landing-header"></header>
+                            <div class="landing-view">
+                                <div class="landing-view">
+                                    <h3 class="landing-name">Кваст</h3>
+                                    <p class="landing-info">Промо-сайт производителя крафтового кваса</p>
+                                    <a class="btn btn-red" href="#">9 900 руб.</a>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <div class="search-paging">
+                        <a class="page-link" href="#">1</a>
+                        <a class="page-link" href="#">2</a>
+                        <a class="page-link" href="#">3</a>
+                        <a class="page-link" href="#">Следующая</a>
+                    </div>
+                </div>
+                <div class="contacts">
+                    <article class="contacts-list">
+                        <h3>Nёrds design studio</h3>
+                        <p class="contacts-address">191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</p>
+                        <p class="contacts-phone">тел. +7 (812) 275-75-75</p>
+                        <a class="btn btn-red" href="#">Напишите нам</a>
+                    </article>
+                </div>
             </div>
-            <div class="our-shop-search-results">
-                <!-- Блок результатов -->
+        </main>
+        <footer class="social-media">
+            <div class="container">
+                <section class="social-media-buttons">
+                    <a class="social-media-network social-vk" href="#">VK</a>
+                    <a class="social-media-network social-facebook" href="#">Facebook</a>
+                    <a class="social-media-network social-instagram" href="#">Instagram</a>
+                </section>
+                <div class="social-media-friends">
+                    <h1>Давайте дружить, это выгодно!</h1>
+                    <p class="social-media-discount">Скидка 10% для друзей из социальных сетей.</p>
+                </div>
             </div>
-        </div>
-    </main>
-</body>
+        </footer>
+    </body>
 </html>
