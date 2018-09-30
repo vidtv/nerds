@@ -39,38 +39,38 @@
                 <h1 class="our-shop">Магазин готовых шаблонов</h1>
                 <div class="our-shop-search">
                     <form class="our-shop-search-filters" action="#" method="get">
-                            <div class="search-value-filter">
-                                <h3>Стоимость:</h3>
-                                <div class="search-slider">
-                                    <div class="search-slider-scale"></div>
-                                </div>
-                                <label class="search-value search-value-from" for="value-from">От</label>
-                                <input type="text" id="value-from">
-                                <label class="search-value-before" for="value-before">До</label>
-                                <input type="text" id="value-before">
-                            </div>
-                            <div class="search-grid-filter">
-                                <h3>Сетка:</h3>
-                                <label><input type="radio" value="adaptive" id="adaptive" checked>Адаптивная</label>
-                                <label><input type="radio" value="fixed" id="fixed">Фиксированная</label>
-                                <label><input type="radio" value="gum" id="gum">Резиновая</label>
-                            </div>
-                            <div class="search-features-filter">
-                                <h3>Особенности:</h3>
-                                <label><input type="checkbox" value="slider" checked>Слайдер</label>
-                                <label><input type="checkbox" value="features-block">Слайдер</label>
-                                <label><input type="checkbox" value="news" checked>Слайдер</label>
-                                <label><input type="checkbox" value="gallery">Слайдер</label>
-                                <label><input type="checkbox" value="basket">Слайдер</label>
-                            </div>
-                            <button class="btn btn-grey" type="submit">Показать</button>
-                        </form>
+                        <div class="search-value-filter">
+                             <h3>Стоимость:</h3>
+                             <div class="search-slider">
+                                <div class="search-slider-scale"></div>
+                             </div>
+                             <label class="search-value search-value-from" for="value-from">От</label>
+                             <input type="text" id="value-from" value="0">
+                             <label class="search-value-before" for="value-before">До</label>
+                             <input type="text" id="value-before" value="15000">
+                        </div>
+                        <div class="search-grid-filter">
+                            <h3>Сетка:</h3>
+                            <label><input type="radio" value="adaptive" id="adaptive" checked>Адаптивная</label>
+                            <label><input type="radio" value="fixed" id="fixed">Фиксированная</label>
+                            <label><input type="radio" value="gum" id="gum">Резиновая</label>
+                        </div>
+                        <div class="search-features-filter">
+                            <h3>Особенности:</h3>
+                            <label><input type="checkbox" value="slider" checked>Слайдер</label>
+                            <label><input type="checkbox" value="features-block">Блок преимуществ</label>
+                            <label><input type="checkbox" value="news" checked>Новости</label>
+                            <label><input type="checkbox" value="gallery">Галерея</label>
+                            <label><input type="checkbox" value="basket">Корзина</label>
+                        </div>
+                        <button class="btn btn-grey" type="submit">Показать</button>
+                    </form>
                 </div>
                 <div class="our-shop-search-results">
                     <div class="sort">
                         <h3>Сортировать:</h3>
                         <div class="sort-parameters">
-                            <a href="#" class="sort-parameter">По цене</a>
+                            <a href="#" class="sort-parameter sort-current">По цене</a>
                             <a href="#" class="sort-parameter">По типу</a>
                             <a href="#" class="sort-parameter">По названию</a>
                             <a href="#" class="sort-order sort-by-desc"></a>
@@ -146,7 +146,7 @@
                         </article>
                     </section>
                     <div class="search-paging">
-                        <a class="page-link" href="#">1</a>
+                        <a class="page-link page-current" href="#">1</a>
                         <a class="page-link" href="#">2</a>
                         <a class="page-link" href="#">3</a>
                         <a class="page-link" href="#">Следующая</a>
@@ -165,9 +165,9 @@
         <footer class="social-media">
             <div class="container">
                 <section class="social-media-buttons">
-                    <a class="social-media-network social-vk" href="#">VK</a>
-                    <a class="social-media-network social-facebook" href="#">Facebook</a>
-                    <a class="social-media-network social-instagram" href="#">Instagram</a>
+                    <a class="social-media-network social-vk" href="#"><img src="img/icons/vk-icon.png" width="26" height="15"></a>
+                    <a class="social-media-network social-facebook" href="#"><img src="img/icons/fb-icon.png" width="12" height="22"></a>
+                    <a class="social-media-network social-instagram" href="#"><img src="img/icons/insta-icon.png" width="21" height="21"></a>
                 </section>
                 <div class="social-media-friends">
                     <h1>Давайте дружить, это выгодно!</h1>
