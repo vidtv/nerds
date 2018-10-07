@@ -13,6 +13,13 @@
     font-family: "Roboto Bold";
 }
 
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    outline: red 1px solid;
+}
+
 a {
     text-transform: uppercase;
     font-family: "Roboto Medium";
