@@ -143,18 +143,20 @@
                         <a href="#"><img src="img/projects/logo-4.png" width="173" height="84"></a>
                     </div>
                 </div>
-                <div class="contacts">
+            </div>
+            <div class="contacts container">
+                <div class="container">
                     <article class="contacts-list">
                         <h3>Nёrds design studio</h3>
-                        <p class="contacts-address">191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</p>
+                        <p class="contacts-address">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
                         <p class="contacts-phone">тел. +7 (812) 275-75-75</p>
                         <a class="btn btn-red" href="#">Напишите нам</a>
                     </article>
                 </div>
             </div>
+
         </main>
-        <footer class="social-media">
-            <div class="container">
+        <footer class="social-media clearfix container">
                 <section class="social-media-buttons">
                     <a class="social-media-network social-vk" href="#"><img src="img/icons/vk-icon.png" width="26" height="15"></a>
                     <a class="social-media-network social-facebook" href="#"><img src="img/icons/fb-icon.png" width="12" height="22"></a>
@@ -164,16 +166,17 @@
                     <h1>Давайте дружить, это выгодно!</h1>
                     <p class="social-media-discount">Скидка 10% для друзей из социальных сетей.</p>
                 </div>
-            </div>
         </footer>
         <!--  всплывающее окно с формой отправки обратной связи -->
-        <div class="write-us-block" style="display: none;">
-            <h1>Напишите нам</h1>
-            <div class="write-us-block-close"></div>
+        <div class="write-us-block" style="display: block;">
+            <header class="clearfix">
+                <h1>Напишите нам</h1>
+                <div class="write-us-block-close"></div>
+            </header>
             <form class="write-us-form">
-                <label for="name"><input type="text" id="name" placeholder="Представьтесь, пожалуйста">Ваше имя:</label>
-                <label for="email"><input type="text" id="email" placeholder="Для отправки ответа">Ваше имя:</label>
-                <label for="letter-text"><textarea id="letter-text" placeholder="В свободной форме">Текст письма:</textarea></label>
+                <label for="name">Ваше имя:<br><input type="text" id="name" placeholder="Представьтесь, пожалуйста"></label><br>
+                <label for="email">Ваш e-mail:<br><input type="text" id="email" placeholder="Для отправки ответа"></label><br>
+                <label for="letter-text">Текст письма:<br><textarea id="letter-text" placeholder="В свободной форме"></textarea></label>
                 <button type="submit" class="btn btn-red">Отправить</button>
             </form>
         </div>
