@@ -381,6 +381,47 @@ footer h1 {
     outline: 1px red solid;
 }
 
+.write-us-block-name,
+.write-us-block-email {
+    display: inline-block;
+    width: 360px;
+}
+
+.write-us-block-name {
+    margin-right: 36px;
+    margin-bottom: 35px;
+}
+
+.write-us-block input,
+.write-us-block textarea {
+    margin-top: 13px;
+}
+
+.write-us-block textarea {
+    width: 760px;
+    max-height: 114px;
+}
+
+.write-us-block-name input,
+.write-us-block-email input {
+    width: 328px;
+    height: 14px;
+    padding: 15px 13px;
+}
+
+.write-us-block-text {
+    margin-bottom: 47px;
+}
+
+.write-us-block .btn {
+    width: 230px;
+    margin-bottom: 74px;
+}
+
+.write-us-block form {
+    height: 360px;
+}
+
 .btn-red {
     background-color: #fb565a;
 }
