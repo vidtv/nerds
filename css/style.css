@@ -422,6 +422,162 @@ footer h1 {
     height: 360px;
 }
 
+.our-shop {
+    line-height: 55px;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 110px;
+}
+
+.our-shop-search {
+    float: left;
+    width: 260px;
+}
+
+.our-shop-search-results {
+    float: right;
+    width: 760px;
+}
+
+.search-value-filter h3,
+.our-shop-search-results h3 {
+    margin: 57px 0;
+}
+
+.search-slider {
+    height: 80px;
+    background-color: #eeeeee;
+    margin-bottom: 14px;
+}
+
+.our-shop-search-filters input {
+    width: 52px;
+    padding: 12px;
+    margin-left: 11px;
+    margin-right: 23px;
+}
+
+input#value-before {
+    margin-right: 0;
+}
+
+.search-value-filter {
+    margin-bottom: 56px;
+}
+
+.search-grid-filter {
+    margin-bottom: 30px;
+}
+
+.search-grid-filter label,
+.search-features-filter label {
+    display: inline-block;
+}
+
+.search-grid-filter h3,
+.search-grid-filter label,
+.search-features-filter label {
+    margin-bottom: 20px;
+}
+
+.search-features-filter {
+    margin-bottom: 25px;
+}
+
+.our-shop-search-filters button {
+    width: 100%;
+}
+
+.sort h3 {
+    float: left;
+}
+
+.sort-parameters {
+    float: right;
+    margin-top: 57px;
+}
+
+.sort-parameters a {
+    display: inline-block;
+}
+
+.sort-parameter {
+    margin-right: 25px;
+}
+
+.sort-by-name {
+    margin-right: 45px;
+}
+
+.sort-order {
+    width: 11px;
+    height: 10px;
+    outline: 1px solid black;
+}
+
+.sort-by-desc {
+    margin-right: 18px;
+}
+
+.our-shop-landings {
+    margin-bottom: 27px;
+}
+
+.our-shop-landings-item {
+    width: 360px;
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 33px;
+}
+
+.our-shop-landings-item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.landing-header {
+    height: 40px;
+    background-color: #e9e9e9;
+}
+
+.landing-view-details {
+    display: none;
+    height: 230px;
+    background-color: #eeeeee;
+}
+
+h3.landing-name,
+p.landing-info,
+.landing-view-details .btn {
+    width: 240px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.landing-view-details .btn {
+    width: 200px;
+    display: block;
+}
+
+.landing-name {
+    padding-top: 30px;
+}
+
+p.landing-info {
+    margin-bottom: 30px;
+    color: #666666;
+}
+
+.search-paging {
+    margin-bottom: 60px;
+}
+
+.page-link {
+    padding: 16px 18px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
 .btn-red {
     background-color: #fb565a;
 }
