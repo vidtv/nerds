@@ -590,7 +590,7 @@ a.social-instagram {
 
 .our-shop-search-filters input {
     width: 52px;
-    padding: 12px;
+    padding: 7px 12px;
     margin-left: 11px;
     margin-right: 23px;
 }
@@ -640,7 +640,18 @@ input#value-before {
 }
 
 .sort-parameter {
-    margin-right: 25px;
+    margin-right: 28px;
+    color: black;
+    opacity: 0.3;
+}
+
+.sort-parameter:hover:not(.sort-current) {
+    opacity: 0.6;
+}
+
+.sort-parameter:active,
+.sort-current {
+    opacity: 1;
 }
 
 .sort-by-name {
@@ -826,11 +837,6 @@ p.landing-info {
     font-family: "Roboto Regular";
     font-size: 14px;
     line-height: 18px;
-    color: #cacaca;
-}
-
-.sort-current {
-    color: #000;
 }
 
 .landing-view-details h3 {
