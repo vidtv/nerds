@@ -17,7 +17,6 @@
     width: 1160px;
     padding: 0 20px;
     margin: 0 auto;
-    outline: red 1px solid;
 }
 
 .clearfix::after {
@@ -84,7 +83,22 @@ h3 {
     margin-right: 40px;
 }
 
+.main-menu a:hover,
+.basket a:hover {
+    color: #fb565a;
+}
+
+.main-menu a:active,
+.basket a:active {
+    color: rgba(0,0,0,0.3);
+}
+
+.main-menu li.link-current {
+    border-bottom: 2px #fb565a solid;
+}
+
 .basket {
+    position: relative;
     float: right;
     width: 120px;
     min-height: 30px;
@@ -92,7 +106,16 @@ h3 {
     padding: 10px;
     padding-right: 0;
     text-align: right;
+}
 
+.basket::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 17px;
+    background: url(../img/spritesheet.png) -5px -5px;
+    width: 15px;
+    height: 15px;
 }
 
 .main-menu li a,
@@ -177,7 +200,18 @@ h3 {
 .feature-item-image {
     width: 300px;
     height: 146px;
-    outline: 1px red solid;
+}
+
+.feature-websites {
+    background-image: url("../img/illustration-1.png");
+}
+
+.feature-apps {
+    background-image: url("../img/illustration-2.png");
+}
+
+.feature-presentations {
+    background-image: url("../img/illustration-3.png");
 }
 
 .feature-item h2 {
@@ -243,8 +277,8 @@ h3 {
     width: 120px;
 }
 
-.about-us-power h1 {
-    margin-top: 35px;
+.about-us-stats h1 {
+    margin-top: 45px;
     margin-bottom: 42px;
 }
 
@@ -264,6 +298,15 @@ h3 {
     vertical-align: middle;
     width: 260px;
     margin-right: 40px;
+    opacity: 0.2;
+}
+
+.our-projects-item:hover {
+    opacity: 1;
+}
+
+.our-projects-item:active {
+    opacity: 0.1;
 }
 
 .our-projects-item:last-child {
@@ -275,8 +318,19 @@ h3 {
 }
 
 .contacts {
+    position: relative;
     height: 416px;
     background-image: url("../img/map.png");
+}
+
+.contacts::before {
+    width: 231px;
+    height: 190px;
+    left: 820px;
+    top: 90px;
+    position: absolute;
+    content: "";
+    background-image: url("../img/map-marker.png");
 }
 
 .contacts.container {
@@ -324,14 +378,56 @@ footer h1 {
     float: left;
 }
 
-.social-media-buttons a {
+.social-media-network {
     background-color: #e1e1e1;
     display: inline-block;
     width: 80px;
     height: 80px;
     margin-right: 13px;
     text-align: center;
-    vertical-align: top;
+    vertical-align: middle;
+    border-radius: 40px;
+}
+
+.social-media-network a {
+    display: block;
+    background: url("../img/spritesheet.png");
+}
+
+.social-media-network:hover {
+    background-color: #e74246;
+}
+
+.social-media-network:active {
+    background-color: #d7373b;
+}
+
+.social-media-network:active a {
+    opacity: 0.3;
+}
+
+a.social-vk {
+    width: 26px;
+    height: 15px;
+    background-position: -5px -75px;
+    margin-left: 26px;
+    margin-top: 33px;
+}
+
+a.social-facebook {
+    width: 12px;
+    height: 22px;
+    background-position: -36px -38px;
+    margin-top: 28px;
+    margin-left: 33px;
+}
+
+a.social-instagram {
+    width: 21px;
+    height: 21px;
+    background-position: -58px -38px;
+    margin-left: 30px;
+    margin-top: 29px;
 }
 
 .social-media-buttons a:last-child {
@@ -357,11 +453,13 @@ footer h1 {
 }
 
 .write-us-block {
-    outline: 1px black solid;
-    margin: 0 auto;
+    z-index: 1000;
+    position: fixed;
+    margin: auto;
     width: 760px;
     height: 510px;
     padding: 70px 100px 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.75);
 }
 
 .write-us-block header {
@@ -374,11 +472,21 @@ footer h1 {
 }
 
 .write-us-block-close {
+    background: url("../img/spritesheet.png") -5px -38px;
     float: right;
     width: 21px;
     height: 21px;
     margin-top: 7px;
-    outline: 1px red solid;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.write-us-block-close:hover {
+    opacity: 1;
+}
+
+.write-us-block-close:active {
+    opacity: 0.1;
 }
 
 .write-us-block-name,
@@ -395,11 +503,37 @@ footer h1 {
 .write-us-block input,
 .write-us-block textarea {
     margin-top: 13px;
+    border: 2px solid #d7dcde;
+    border-radius: 2px;
+    outline: none;
+}
+
+.write-us-block input[placeholder],
+.write-us-block textarea[placeholder] {
+    color: #444444;
+}
+
+.write-us-block input:hover,
+.write-us-block textarea:hover {
+    border-color: #b4b9bb;
+}
+
+.write-us-block input.invalid,
+.write-us-block textarea.invalid {
+    border-color: #e74246;
+    color: #e74246;
+}
+
+.write-us-block input:focus,
+.write-us-block textarea:focus {
+    border-color: black;
+    color: #000;
 }
 
 .write-us-block textarea {
-    width: 760px;
-    max-height: 114px;
+    width: 730px;
+    max-height: 84px;
+    padding: 15px;
 }
 
 .write-us-block-name input,
@@ -416,6 +550,9 @@ footer h1 {
 .write-us-block .btn {
     width: 230px;
     margin-bottom: 74px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .write-us-block form {
@@ -578,16 +715,44 @@ p.landing-info {
     margin-right: 10px;
 }
 
+.btn:active {
+    color: rgba(255,255,255,0.3);
+}
+
 .btn-red {
     background-color: #fb565a;
+}
+
+.btn-red:hover {
+    background-color: #e74246;
+}
+
+.btn-red:active {
+    background-color: #d7373b;
 }
 
 .btn-green {
     background-color: #00ca74;
 }
 
+.btn-green:hover {
+    background-color: #00bc6c;
+}
+
+.btn-green:active {
+    background-color: #00aa62;
+}
+
 .btn-yellow {
     background-color: #efc84a;
+}
+
+.btn-yellow:hover {
+    background-color: #eab534;
+}
+
+.btn-yellow:active {
+    background-color: #e5a722;
 }
 
 .btn-grey {
@@ -705,7 +870,8 @@ p.landing-info {
     color: black;
 }
 
-.write-us-block input {
+.write-us-block input,
+.write-us-block textarea {
     font-family: "Roboto Regular";
 }
 
@@ -714,6 +880,16 @@ p.landing-info {
     font-family: "Roboto Regular";
     color: #b1b1b1;
 }
+
+.to-main-page img:hover {
+    opacity: 0.8;
+}
+
+.to-main-page img:active {
+    opacity: 0.3;
+}
+
+
 
 
 
