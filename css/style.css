@@ -577,15 +577,59 @@ a.social-instagram {
     width: 760px;
 }
 
-.search-value-filter h3,
+.search-value-filter h3 {
+    margin: 54px 0;
+}
+
 .our-shop-search-results h3 {
-    margin: 57px 0;
+    margin: 60px 0;
 }
 
 .search-slider {
-    height: 80px;
-    background-color: #eeeeee;
+    padding: 40px 20px 0;
+    height: 40px;
     margin-bottom: 14px;
+}
+
+.search-slider,
+.search-value-filter input {
+    border-radius: 2px;
+    background-color: #eeeeee;
+    border: none;
+}
+
+.search-slider-scale {
+    height: 2px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.scale-in {
+    width: 140px;
+    background-color: #00ca74;
+    position: relative;
+}
+
+.scale-in::before,
+.scale-in::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 5px;
+    background-color: #ababab;
+    border: 8px white solid;
+    border-radius: 8px;
+    top: -10px;
+}
+
+.scale-out {
+    width: 80px;
+    background-color: #d7dcde;
+}
+
+.scale-in::after {
+    left: 140px;
 }
 
 .our-shop-search-filters input {
@@ -593,6 +637,7 @@ a.social-instagram {
     padding: 7px 12px;
     margin-left: 11px;
     margin-right: 23px;
+    text-align: center;
 }
 
 input#value-before {
