@@ -106,6 +106,7 @@ h3 {
     padding: 10px;
     padding-right: 0;
     text-align: right;
+    cursor: pointer;
 }
 
 .basket::before {
@@ -175,6 +176,7 @@ h3 {
     font-family: "Roboto Medium";
     display: inline-block;
     padding: 15px;
+    border-radius: 2px;
 }
 
 .slide-information .btn {
@@ -589,6 +591,8 @@ a.social-instagram {
     padding: 40px 20px 0;
     height: 40px;
     margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
 }
 
 .search-slider,
@@ -600,43 +604,36 @@ a.social-instagram {
 
 .search-slider-scale {
     height: 2px;
-    display: inline-block;
-    vertical-align: top;
+    background-color: #d7dcde;
 }
 
-.scale-in {
-    width: 140px;
+.bar {
     background-color: #00ca74;
-    position: relative;
+    height: 2px;
 }
 
-.scale-in::before,
-.scale-in::after {
+.togglers {
     content: "";
     display: block;
     position: absolute;
     width: 4px;
-    height: 5px;
+    height: 4px;
     background-color: #ababab;
     border: 8px white solid;
     border-radius: 8px;
-    top: -10px;
+    top: 30px;
+    cursor: pointer;
 }
 
-.scale-out {
-    width: 80px;
-    background-color: #d7dcde;
-}
-
-.scale-in::after {
-    left: 140px;
+.toggler-max {
+    left: 160px;
 }
 
 .our-shop-search-filters input {
     width: 52px;
-    padding: 7px 12px;
-    margin-left: 11px;
-    margin-right: 23px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    margin-right: 20px;
     text-align: center;
 }
 
@@ -652,9 +649,14 @@ input#value-before {
     margin-bottom: 30px;
 }
 
+.search-features-filter {
+    margin-bottom: 48px;
+}
+
 .search-grid-filter label,
 .search-features-filter label {
-    display: inline-block;
+    display: block;
+    cursor: pointer;
 }
 
 .search-grid-filter h3,
@@ -663,12 +665,68 @@ input#value-before {
     margin-bottom: 20px;
 }
 
-.search-features-filter {
-    margin-bottom: 25px;
+.search-features-filter input,
+.search-grid-filter input {
+    display: none;
+}
+
+.search-grid-filter input + label:before,
+.search-features-filter input + label:before {
+    content: "";
+    display: inline-block;
+    background: url("../img/spritesheet.png") no-repeat;
+    opacity: 0.4;
+    margin-right: 10px;
+    margin-bottom: -7px;
+}
+
+.search-grid-filter input:hover + label::before,
+.search-features-filter input:hover + label::before {
+    opacity: 1;
+}
+
+.search-grid-filter input:disabled + label:before,
+.search-features-filter input:disabled + label:before {
+    opacity: 0.1;
+}
+
+.search-grid-filter input + label:before {
+    width: 25px;
+    height: 25px;
+    background-position: -100px -5px;
+}
+
+.search-grid-filter input:checked + label:before {
+    background-position: -89px -40px;
+}
+
+.search-features-filter input + label:before {
+    width: 26px;
+    height: 23px;
+    margin-right: 9px;
+    background-position: -30px -5px;
+}
+
+.search-features-filter input:checked + label:before {
+    background-position: -63px -5px;
 }
 
 .our-shop-search-filters button {
     width: 100%;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+.our-shop-search-filters button:hover {
+    background-color: #dfdfdf;
+}
+
+.our-shop-search-filters button:active {
+    background-color: #d5d5d5;
+    color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .sort h3 {
@@ -704,13 +762,43 @@ input#value-before {
 }
 
 .sort-order {
-    width: 11px;
-    height: 10px;
-    outline: 1px solid black;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.sort-by-asc {
+    border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.sort-by-asc:hover {
+    border-bottom: 10px solid #a6a6a6;
+}
+
+.sort-by-asc:active {
+    border-bottom: 10px solid #231f20;
+}
+
+.sort-by-asc.current {
+    border-bottom: 10px solid #010101;
 }
 
 .sort-by-desc {
+    border-top: 10px solid rgba(0, 0, 0, 0.2);
     margin-right: 18px;
+}
+
+.sort-by-desc:hover {
+    border-top: 10px solid #a6a6a6;
+}
+
+.sort-by-desc:active {
+    border-top: 10px solid #231f20;
+}
+
+.sort-by-desc.current {
+    border-top: 10px solid #010101;
 }
 
 .our-shop-landings {
@@ -718,25 +806,70 @@ input#value-before {
 }
 
 .our-shop-landings-item {
+    position: relative;
     width: 360px;
+    height: 602px;
     display: inline-block;
     margin-right: 40px;
     margin-bottom: 33px;
+    padding-top: 13px;
+    background-color: #e9e9e9;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.our-shop-landings-item:hover {
+    background-color: #4d4d4d;
+}
+
+.our-shop-landings-item img {
+    display: block;
 }
 
 .our-shop-landings-item:nth-child(2n) {
     margin-right: 0;
 }
 
-.landing-header {
-    height: 40px;
-    background-color: #e9e9e9;
+.landing-buttons,
+.landing-buttons::before,
+.landing-buttons::after {
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+}
+
+.landing-buttons {
+    margin-left: 39px;
+    margin-bottom: 13px;
+}
+
+.landing-buttons::before,
+.landing-buttons::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+}
+
+.landing-buttons::before {
+    left: 16px;
+}
+
+.landing-buttons::after {
+    left: 62px;
 }
 
 .landing-view-details {
+    width: 100%;
     display: none;
+    position: absolute;
+    bottom: 0;
     height: 230px;
     background-color: #eeeeee;
+}
+
+.our-shop-landings-item:hover .landing-view-details {
+    display: block;
 }
 
 h3.landing-name,
@@ -748,7 +881,7 @@ p.landing-info,
 }
 
 .landing-view-details .btn {
-    width: 200px;
+    width: 170px;
     display: block;
 }
 
@@ -766,7 +899,7 @@ p.landing-info {
 }
 
 .page-link {
-    padding: 16px 18px;
+    padding: 16px 20px;
     display: inline-block;
     margin-right: 10px;
 }
@@ -898,10 +1031,23 @@ p.landing-info {
 .page-link {
     color: black;
     background-color: #eeeeee;
+    border-radius: 2px;
+}
+
+.page-link:not(.page-current):hover {
+    background-color: #dfdfdf;
+}
+
+.page-link:not(.page-current):active {
+    background-color: #d5d5d5;
+    color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .page-current {
     background-color: white;
+    border: 3px solid #dbdbdb;
+    padding: 13px 15px;
 }
 
 .write-us-block h1 {
