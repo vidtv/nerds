@@ -180,16 +180,20 @@
             </header>
             <form class="write-us-form">
                 <div class="write-us-block-name">
-                    <label for="name">Ваше имя:<br><input type="text" id="name" placeholder="Представьтесь, пожалуйста"></label>
+                    <label for="name">Ваше имя:<br><input type="text" id="name" placeholder="Представьтесь, пожалуйста"
+                                                          required></label>
                 </div>
                 <div class="write-us-block-email">
-                    <label for="email">Ваш e-mail:<br><input type="text" id="email" placeholder="Для отправки ответа"></label>
+                    <label for="email">Ваш e-mail:<br><input type="text" id="email" placeholder="Для отправки ответа"
+                                                             required></label>
                 </div>
                 <div class="write-us-block-text">
-                    <label for="letter-text">Текст письма:<br><textarea id="letter-text" placeholder="В свободной форме" rows="6"></textarea></label>
+                    <label for="letter-text">Текст письма:<br><textarea id="letter-text" placeholder="В свободной форме"
+                                                                        rows="6" required></textarea></label>
                 </div>
                 <button type="submit" class="btn btn-red">Отправить</button>
             </form>
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>

@@ -455,6 +455,7 @@ footer h1 {
 }
 
 .social-media-network {
+    cursor: pointer;
     background-color: #e1e1e1;
     display: inline-block;
     width: 80px;
@@ -529,13 +530,19 @@ a.social-instagram {
 }
 
 .write-us-block {
+    display: none;
     z-index: 1000;
     position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     margin: auto;
     width: 760px;
     height: 510px;
     padding: 70px 100px 10px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.75);
+    background-color: white;
 }
 
 .write-us-block header {
@@ -629,6 +636,11 @@ a.social-instagram {
     border: none;
     border-radius: 2px;
     cursor: pointer;
+    outline: none;
+}
+
+.write-us-block-show {
+    display: block;
 }
 
 .write-us-block form {
@@ -1121,7 +1133,7 @@ p.landing-info {
 .page-current {
     background-color: white;
     border: 3px solid #dbdbdb;
-    padding: 13px 15px;
+    padding: 13px 17px;
 }
 
 .write-us-block h1 {
