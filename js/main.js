@@ -3,13 +3,16 @@ var feedbackModalWindow = document.querySelector(".write-us-block");
 var feedbackModalWindowCloseButton = document.querySelector(".write-us-block-close");
 var formNameInput = feedbackModalWindow.querySelector("input[id='name']");
 var formEMailInput = feedbackModalWindow.querySelector("input[id='email']");
-var formMessageTextarea = feedbackModalWindow.querySelector("textarea#letter-text");
 
-feedbackButton.addEventListener("click", function () {
+feedbackButton.addEventListener("click", function (event) {
+    event.preventDefault();
     feedbackModalWindow.classList.add("write-us-block-show");
-    formNameInput.focus();
     formNameInput.value = localStorage.getItem("name");
-    formEMailInput.focus();
+    if (formNameInput.value) {
+        formEMailInput.focus();
+    } else {
+        formNameInput.focus();
+    }
 });
 
 feedbackModalWindowCloseButton.addEventListener("click", function () {
@@ -18,6 +21,7 @@ feedbackModalWindowCloseButton.addEventListener("click", function () {
 
 window.addEventListener("keydown", function (event) {
     if (event.keyCode == 27) {
+        event.preventDefault();
         feedbackModalWindow.classList.remove("write-us-block-show");
     }
 });
