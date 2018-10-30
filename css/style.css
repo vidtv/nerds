@@ -396,21 +396,7 @@ h3 {
 .contacts {
     position: relative;
     height: 416px;
-    background-image: url("../img/map.png");
-}
-
-.contacts::before {
-    width: 231px;
-    height: 190px;
-    left: 820px;
-    top: 90px;
-    position: absolute;
-    content: "";
-    background-image: url("../img/map-marker.png");
-}
-
-.contacts.container {
-    width: 1440px;
+    background: url("../img/map.png") center no-repeat;
     margin: 0 auto 60px;
     padding: 0;
 }
