@@ -129,7 +129,8 @@ h3 {
 .slider {
     position: relative;
     width: 100%;
-    height: 430px;
+    min-height: 430px;
+    overflow: paged-x;
 }
 
 .slides {
@@ -170,6 +171,11 @@ h3 {
     width: 520px;
     margin-top: 0;
     margin-bottom: 20px;
+}
+
+/* для корректного отображения заголовков в FF */
+h1, h2, h3 {
+    font-weight: inherit;
 }
 
 .slide-description {
@@ -267,9 +273,10 @@ h3 {
     display: inline-block;
     margin-right: 100px;
     width: 300px;
+    vertical-align: top;
 }
 
-.feature-item:last-child {
+.feature-item:nth-child(3n) {
     margin-right: 0;
 }
 
@@ -385,7 +392,7 @@ h3 {
     opacity: 0.1;
 }
 
-.our-projects-item:last-child {
+.our-projects-item:nth-child(4n) {
     margin-right: 0;
 }
 
