@@ -403,7 +403,6 @@ h1, h2, h3 {
 .contacts {
     position: relative;
     height: 416px;
-    background: url("../img/map.png") center no-repeat;
     margin: 0 auto 60px;
     padding: 0;
 }
@@ -412,8 +411,10 @@ h1, h2, h3 {
     float: left;
     background-color: white;
     width: 220px;
-    margin-top: 54px;
     padding: 51px 50px 47px;
+    position: absolute;
+    top: 55px;
+    border: 1px #b4b9bb solid;
 }
 
 .contacts-list h3 {
@@ -436,6 +437,7 @@ h1, h2, h3 {
 footer.container {
     padding-top: 10px;
     margin-bottom: 60px;
+    position: relative;
 }
 
 footer h1 {

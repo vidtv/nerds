@@ -5,6 +5,31 @@
         <title>Магазин готовых шаблонов</title>
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=7c100492-1337-4222-9606-31ed9ffebff3&load=package.full&lang=ru_RU&onload=init"
+                type="text/javascript">
+        </script>
+        <script type="text/javascript">
+            // Сразу после загрузки API будет
+            // вызвана функция init.
+            // На момент ее исполнения div-контейнер
+            // карты уже будет готов.
+            function init(ymaps) {
+                var myMap = new ymaps.Map("YMapsID", {
+                    center: [59.9392, 30.322685],
+                    zoom: 16
+                });
+
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    balloonContent: 'Адрес HTML Academy ;)'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/map-marker.png',
+                    iconImageSize: [110, 90]
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+            }
+        </script>
     </head>
     <body>
     <header>
@@ -159,6 +184,7 @@
             </div>
             <div class="contacts">
                 <div class="container">
+                    <div id="YMapsID" style="width: 1160px; height: 416px;"></div>
                     <article class="contacts-list">
                         <h3>Nёrds design studio</h3>
                         <p class="contacts-address">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
@@ -167,6 +193,7 @@
                     </article>
                 </div>
             </div>
+
         </main>
         <footer class="social-media clearfix container">
             <section class="social-media-buttons">
