@@ -13,6 +13,10 @@
     font-family: "Roboto Bold";
 }
 
+body {
+    font-family: "Roboto Regular";
+}
+
 .container {
     width: 1160px;
     padding: 0 20px;
@@ -23,10 +27,6 @@
     content: "";
     clear: both;
     display: table;
-}
-
-body {
-    margin-top: 0;
 }
 
 header {
@@ -45,6 +45,14 @@ a {
 
 h1 {
     font-family: "Roboto Medium";
+    font-size: 45px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 h2, h3 {
@@ -57,19 +65,31 @@ h3 {
     line-height: 24px;
 }
 
+/* для корректного отображения заголовков в FF */
+h1, h2, h3 {
+    font-weight: inherit;
+}
+
 .main-page-link {
     min-height: 70px;
     float: left;
     margin-top: 50px;
-    margin-right: 190px;
+    margin-right: 200px;
+}
+
+.to-main-page img:hover {
+    opacity: 0.8;
+}
+
+.to-main-page img:active {
+    opacity: 0.3;
 }
 
 .main-menu {
     float: left;
     width: 650px;
     min-height: 30px;
-    margin-top: 60px;
-    padding: 10px;
+    margin-top: 70px;
 }
 
 .main-menu ul {
@@ -103,8 +123,7 @@ h3 {
     width: 120px;
     min-height: 30px;
     margin-top: 60px;
-    padding: 10px;
-    padding-right: 0;
+    padding: 10px 0 10px 10px;
     text-align: right;
     cursor: pointer;
 }
@@ -130,20 +149,13 @@ h3 {
     position: relative;
     width: 100%;
     min-height: 430px;
-    overflow: paged-x;
 }
 
 .slides {
     position: relative;
 }
 
-.slides h1 {
-    font-size: 55px;
-    line-height: 55px;
-}
-
 .slide1 {
-    display: block;
     background: url("../img/slide1.png") no-repeat 430px 16px;
 }
 
@@ -156,33 +168,25 @@ h3 {
 }
 
 .slide {
-    padding-top: 80px;
-    padding-bottom: 80px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding-right: 10px;
-    padding-left: 0;
+    padding: 80px 10px 80px 0;
     display: none;
 }
 
 .slide h1 {
+    font-size: 55px;
+    line-height: 55px;
     width: 520px;
     margin-top: 0;
-    margin-bottom: 20px;
-}
-
-/* для корректного отображения заголовков в FF */
-h1, h2, h3 {
-    font-weight: inherit;
+    margin-bottom: 30px;
 }
 
 .slide-description {
-    padding: 10px;
-    padding-left: 0;
     width: 420px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .slider-toggler {
@@ -241,7 +245,6 @@ h1, h2, h3 {
 .feature-item-description,
 .about-us-features,
 .about-us-orders li {
-    font-family: "Roboto Regular";
     font-size: 16px;
     line-height: 24px;
     color: #283136;
@@ -257,11 +260,58 @@ h1, h2, h3 {
     display: inline-block;
     padding: 15px;
     border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-red {
+    background-color: #fb565a;
+}
+
+.btn-red:hover {
+    background-color: #e74246;
+}
+
+.btn-red:active {
+    background-color: #d7373b;
+}
+
+.btn-green {
+    background-color: #00ca74;
+}
+
+.btn-green:hover {
+    background-color: #00bc6c;
+}
+
+.btn-green:active {
+    background-color: #00aa62;
+}
+
+.btn-yellow {
+    background-color: #efc84a;
+}
+
+.btn-yellow:hover {
+    background-color: #eab534;
+}
+
+.btn-yellow:active {
+    background-color: #e5a722;
+}
+
+.btn-grey {
+    color: #000;
+    background-color: #eeeeee;
 }
 
 .slide .btn {
     width: 210px;
-    text-align: center;
 }
 
 .features {
@@ -297,11 +347,6 @@ h1, h2, h3 {
     background-image: url("../img/illustration-3.png");
 }
 
-.feature-item h2 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
 .feature-item-description {
     margin-bottom: 35px;
 }
@@ -325,6 +370,7 @@ h1, h2, h3 {
 .about-us-left h1 {
     margin-top: 65px;
     margin-bottom: 35px;
+    line-height: 45px;
 }
 
 .about-us-left h3 {
@@ -361,11 +407,14 @@ h1, h2, h3 {
 }
 
 .about-us-stats h1 {
+    line-height: 10px;
     margin-top: 45px;
     margin-bottom: 42px;
 }
 
 .about-us-stats p {
+    font-size: 16px;
+    line-height: 18px;
     margin-bottom: 0;
 }
 
@@ -407,6 +456,12 @@ h1, h2, h3 {
     padding: 0;
 }
 
+.contacts h3,
+.catalog-main h3 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
 .contacts-list {
     float: left;
     background-color: white;
@@ -420,6 +475,12 @@ h1, h2, h3 {
 .contacts-list h3 {
     margin-top: 0;
     margin-bottom: 25px;
+}
+
+.contacts-list p {
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
 }
 
 .contacts-address {
@@ -441,9 +502,10 @@ footer.container {
 }
 
 footer h1 {
-    font-family: "Roboto Medium";
     font-size: 36px;
     line-height: 36px;
+    margin-top: 7px;
+    margin-bottom: 10px;
 }
 
 .social-media-buttons {
@@ -512,13 +574,7 @@ a.social-instagram {
     margin-left: 140px;
 }
 
-.social-media-friends h1 {
-    margin-top: 7px;
-    margin-bottom: 10px;
-}
-
 .social-media-discount {
-    font-family: "Roboto Regular";
     font-size: 16px;
     line-height: 22px;
     color: #444444;
@@ -547,24 +603,26 @@ a.social-instagram {
 .write-us-block h1 {
     float: left;
     margin-top: 0;
+    line-height: 45px;
 }
 
-.write-us-block-close {
-    background: url("../img/spritesheet.png") -5px -38px;
-    float: right;
-    width: 21px;
-    height: 21px;
-    margin-top: 7px;
-    cursor: pointer;
-    opacity: 0.3;
+.write-us-block label,
+.write-us-block input,
+.write-us-block textarea {
+    font-size: 16px;
+    line-height: 18px;
 }
 
-.write-us-block-close:hover {
-    opacity: 1;
+.write-us-block label {
+    font-family: "Roboto Bold";
+    color: black;
 }
 
-.write-us-block-close:active {
-    opacity: 0.1;
+.write-us-block input,
+.write-us-block textarea,
+.write-us-block input[placeholder],
+.write-us-block textarea[placeholder] {
+    font-family: "Roboto Regular";
 }
 
 .write-us-block-name,
@@ -609,8 +667,7 @@ a.social-instagram {
 }
 
 .write-us-block textarea {
-    width: 730px;
-    max-height: 84px;
+    width: 725px;
     padding: 15px;
 }
 
@@ -628,10 +685,6 @@ a.social-instagram {
 .write-us-block .btn {
     width: 230px;
     margin-bottom: 74px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    outline: none;
 }
 
 .write-us-block-show {
@@ -640,6 +693,24 @@ a.social-instagram {
 
 .write-us-block form {
     height: 360px;
+}
+
+.write-us-block-close {
+    background: url("../img/spritesheet.png") -5px -38px;
+    float: right;
+    width: 21px;
+    height: 21px;
+    margin-top: 7px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.write-us-block-close:hover {
+    opacity: 1;
+}
+
+.write-us-block-close:active {
+    opacity: 0.1;
 }
 
 .our-shop {
@@ -665,6 +736,8 @@ a.social-instagram {
 }
 
 .our-shop-search-results h3 {
+    line-height: 18px;
+    float: left;
     margin: 60px 0;
 }
 
@@ -716,6 +789,18 @@ a.social-instagram {
     margin-left: 10px;
     margin-right: 20px;
     text-align: center;
+}
+
+.our-shop-search label,
+.our-shop-search input {
+    color: #283136;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.search-value-filter label {
+    line-height: 22px;
+    text-transform: uppercase;
 }
 
 input#value-before {
@@ -810,10 +895,6 @@ input#value-before {
     box-shadow: inset 0 3px rgba(0, 0, 0, 0.1);
 }
 
-.sort h3 {
-    float: left;
-}
-
 .sort-parameters {
     float: right;
     margin-top: 57px;
@@ -824,9 +905,12 @@ input#value-before {
 }
 
 .sort-parameter {
-    margin-right: 28px;
+    font-family: "Roboto Regular";
+    font-size: 14px;
+    line-height: 18px;
     color: black;
     opacity: 0.3;
+    margin-right: 28px;
 }
 
 .sort-parameter:hover:not(.sort-current) {
@@ -838,7 +922,7 @@ input#value-before {
     opacity: 1;
 }
 
-.sort-by-name {
+.sort-parameter.last-parameter {
     margin-right: 45px;
 }
 
@@ -954,8 +1038,13 @@ input#value-before {
 }
 
 h3.landing-name,
-p.landing-info,
+.landing-info,
 .landing-view-details .btn {
+    margin: 0 auto 20px;
+}
+
+h3.landing-name,
+.landing-info {
     width: 240px;
     margin: 0 auto 20px;
     text-align: center;
@@ -966,13 +1055,15 @@ p.landing-info,
     display: block;
 }
 
-.landing-name {
-    padding-top: 30px;
+h3.landing-name {
+    margin-top: 30px;
 }
 
-p.landing-info {
+.landing-info {
     margin-bottom: 30px;
     color: #666666;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .search-paging {
@@ -980,139 +1071,12 @@ p.landing-info {
 }
 
 .page-link {
+    color: black;
+    background-color: #eeeeee;
     padding: 16px 20px;
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
-}
-
-.btn:active {
-    color: rgba(255,255,255,0.3);
-}
-
-.btn-red {
-    background-color: #fb565a;
-}
-
-.btn-red:hover {
-    background-color: #e74246;
-}
-
-.btn-red:active {
-    background-color: #d7373b;
-}
-
-.btn-green {
-    background-color: #00ca74;
-}
-
-.btn-green:hover {
-    background-color: #00bc6c;
-}
-
-.btn-green:active {
-    background-color: #00aa62;
-}
-
-.btn-yellow {
-    background-color: #efc84a;
-}
-
-.btn-yellow:hover {
-    background-color: #eab534;
-}
-
-.btn-yellow:active {
-    background-color: #e5a722;
-}
-
-.btn-grey {
-    color: #000;
-    background-color: #eeeeee;
-}
-
-.feature-item h2 {
-    font-size: 24px;
-    line-height: 30px;
-}
-
-.about-us h1 {
-    font-size: 45px;
-    line-height: 45px;
-}
-
-.about-us h3 {
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.about-us-stats h1 {
-    font-size: 45px;
-    line-height: 10px;
-}
-
-.about-us-stats p {
-    font-family: "Roboto Regular";
-    font-size: 16px;
-    line-height: 18px;
-}
-
-.contacts h3 {
-    font-size: 18px;
-    line-height: 30px;
-}
-
-.contacts-address,
-.contacts-phone {
-    font-family: "Roboto Regular";
-    font-size: 16px;
-    line-height: 18px;
-    color: #666666;
-}
-
-.our-shop-search h3 {
-    font-size: 18px;
-    line-height: 30px;
-}
-
-.our-shop-search label,
-.our-shop-search input {
-    color: #283136;
-    font-family: "Roboto Regular";
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.search-value-filter label {
-    line-height: 22px;
-    text-transform: uppercase;
-}
-
-.our-shop-search-results h3 {
-    font-size: 18px;
-    line-height: 18px;
-}
-
-.sort-parameter {
-    font-family: "Roboto Regular";
-    font-size: 14px;
-    line-height: 18px;
-}
-
-.landing-view-details h3 {
-    font-size: 18px;
-    line-height: 30px;
-}
-
-.landing-info {
-    font-family: "Roboto Regular";
-    font-size: 16px;
-    line-height: 18px;
-}
-
-.page-link {
-    color: black;
-    background-color: #eeeeee;
     border-radius: 2px;
 }
 
@@ -1130,42 +1094,6 @@ p.landing-info {
     background-color: white;
     border: 3px solid #dbdbdb;
     padding: 13px 17px;
-}
-
-.write-us-block h1 {
-    font-size: 45px;
-    line-height: 45px;
-}
-
-.write-us-block label,
-.write-us-block input,
-.write-us-block textarea {
-    font-size: 16px;
-    line-height: 18px;
-}
-
-.write-us-block label {
-    font-family: "Roboto Bold";
-    color: black;
-}
-
-.write-us-block input,
-.write-us-block textarea {
-    font-family: "Roboto Regular";
-}
-
-.write-us-block input::placeholder,
-.write-us-block textarea::placeholder {
-    font-family: "Roboto Regular";
-    color: #b1b1b1;
-}
-
-.to-main-page img:hover {
-    opacity: 0.8;
-}
-
-.to-main-page img:active {
-    opacity: 0.3;
 }
 
 
